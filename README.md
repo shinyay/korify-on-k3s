@@ -74,6 +74,7 @@ ubuntu@k3s:~$ curl -sfL https://get.k3s.io | sh -s - --disable traefik --write-k
 - `--disable traefik`
   - The `–-disable traefik` argument is passed to the installation script to disable the installation of the Traefik ingress controller. This is because we will install Contour for ingress control at a later step and the two will conflict with each other.
 - `–-write-kubeconfig-mode 644`
+  - This sets the file permission mode of the generated kubeconfig file to 644 which means the owner will have read and write access, while others have only read access
 
 ## Demo
 
