@@ -188,6 +188,15 @@ helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v0.
 --wait
 ```
 
+```shell
+NAME: korifi
+LAST DEPLOYED: Thu Jul  6 15:31:31 2023
+NAMESPACE: korifi
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+```
+
 ## Demo
 
 ## Features
