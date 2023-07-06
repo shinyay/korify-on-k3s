@@ -17,6 +17,14 @@ In this tutorial I will try to install Korify on K3s.
 
 K3s does not support MacOS. So you have to we need to setup a Linux layer on top of MacOS.
 
+**Multipass** is a lightweight VM manager for Linux, Windows and macOS. It's designed for developers who want a fresh Ubuntu environment with a single command.
+
+- [Multipass](https://github.com/canonical/multipass)
+
+```shell
+brew install --cask multipass
+```
+
 ### 1. Install K3s
 
 ```shell
