@@ -222,6 +222,17 @@ API version:    3.117.0+cf-k8s
 Not logged in. Use 'cf login' or 'cf login --sso' to log in.
 ```
 
+```shell
+$ cf login
+
+1. default
+
+Choose your Kubernetes authentication info (enter to skip): 1
+
+Authenticating...
+OK
+```
+
 ## Demo
 
 ## Features
