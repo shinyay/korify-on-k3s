@@ -85,6 +85,17 @@ export ADMIN_USERNAME="system:admin"
 export BASE_DOMAIN="localhost"
 ```
 
+### 3. Install cert-manager
+
+You can find the latest verison of cert-manager
+
+- [cert-manager](https://github.com/cert-manager/cert-manager)
+
+```shell
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.yaml
+
+```
+
 ## Demo
 
 ## Features
