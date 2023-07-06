@@ -165,6 +165,23 @@ kubectl --namespace "$ROOT_NAMESPACE" create secret docker-registry image-regist
 
 ### 8. Install Korifi
 
+You can find the latest version of Korify
+
+- [korify](https://github.com/cloudfoundry/korifi/)
+
+```shell
+helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v<VERSION>/korifi-<VERSION>.tgz \
+    --namespace="$KORIFI_NAMESPACE" \
+    --set=global.generateIngressCertificates=true \
+    --set=global.rootNamespace="$ROOT_NAMESPACE" \
+    --set=adminUserName="$ADMIN_USERNAME" \
+    --set=api.apiServer.url="api.$BASE_DOMAIN" \
+    --set=global.defaultAppDomainName="apps.$BASE_DOMAIN" \
+    --set=global.containerRepositoryPrefix=europe-docker.pkg.dev/my-project/korifi/ \
+    --set=kpackImageBuilder.builderRepository=europe-docker.pkg.dev/my-project/korifi/kpack-builder \
+    --wait
+```
+
 ```shell
 helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v0.7.1/korifi-0.7.1.tgz   --
  
