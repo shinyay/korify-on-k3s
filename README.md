@@ -170,6 +170,11 @@ You can find the latest version of Korify
 - [korify](https://github.com/cloudfoundry/korifi/)
 
 ```shell
+sudo snap install helm --classic
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+```
+
+```shell
 helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v0.7.1/korifi-0.7.1.tgz \
     --namespace="$KORIFI_NAMESPACE" \
     --set=global.generateIngressCertificates=true \
