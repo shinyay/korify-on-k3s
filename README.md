@@ -223,7 +223,7 @@ Not logged in. Use 'cf login' or 'cf login --sso' to log in.
 ```
 
 ```shell
-$ cf login
+cf login
 
 1. default
 
@@ -231,6 +231,16 @@ Choose your Kubernetes authentication info (enter to skip): 1
 
 Authenticating...
 OK
+```
+
+```shell
+cf create-org shinyay-org
+cf create-space -o shinyay-org shinyay-space
+cf target -o shinyay-org
+```
+
+```shell
+cf push sample-app
 ```
 
 ## Demo
