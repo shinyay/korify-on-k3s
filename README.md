@@ -1,5 +1,7 @@
 # Getting started with Korify on K3s
 
+![image](https://github.com/shinyay/korify-on-k3s/assets/3072734/f738bd9d-32d1-42f2-935b-e6c33473d87e)
+
 Cloud Foundry Korifi is the familiar Cloud Foundry abstraction ported over to Kubernetes clusters. It brings a multitenant experience to Kubernetes and helps app developers consume clusters with ease.
 
 - [Cloud Foundry Korifi](https://www.cloudfoundry.org/technology/korifi/)
