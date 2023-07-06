@@ -85,15 +85,24 @@ export ADMIN_USERNAME="system:admin"
 export BASE_DOMAIN="localhost"
 ```
 
-### 3. Install cert-manager
+### 3. Install Cert Manager
 
-You can find the latest verison of cert-manager
+**Cert Manager** is an open source certificate-management solution designed specifically for Kubernetes clusters. It helps automate the management and issuance of X.509 certificates, which are used for securing communications between various components and services within a Kubernetes environment.
+
+You can find the latest verison of Cert Manager
 
 - [cert-manager](https://github.com/cert-manager/cert-manager)
 
 ```shell
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.0/cert-manager.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.2/cert-manager.yaml
+```
 
+### 4. Install kpack
+
+**Kpack** is an open source project that integrates with Kubernetes to provide a container-native build process. It consumes Cloud Native Buildpacks to export OCI-compatible containers.
+
+```shell
+kubectl apply -f https://github.com/pivotal/kpack/releases/download/v0.11.0/release-0.11.0.yaml
 ```
 
 ## Demo
