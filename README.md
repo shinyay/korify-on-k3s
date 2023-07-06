@@ -155,6 +155,31 @@ namespace/korifi created
 kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
 ```
 
+### 7. Create Container Registry Credentials
+
+```shell
+kubectl --namespace "$ROOT_NAMESPACE" create secret docker-registry image-registry-credentials \
+    --docker-username="<your-container-registry-username>" \
+    --docker-password="<your-container-registry-password>"
+```
+
+### 8. Install Korifi
+
+```shell
+helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v0.7.1/korifi-0.7.1.tgz   --
+ 
+namespace="korifi"   --set=global.generateIngressCertificates=true   --set=global.rootNamespace="cf"   --
+ 
+set=global.containerRegistrySecret="image-registry-credentials"   --set=adminUserName="system:admin"   --
+ 
+set=api.apiServer.url="api.localhost"   --set=global.defaultAppDomainName="apps.localhost"   --
+ 
+set=global.containerRepositoryPrefix="us-central1-docker.pkg.dev/summit-labs/korifi/korifi-"   --
+ 
+set=kpackImageBuilder.builderRepository="us-central1-docker.pkg.dev/summit-labs/korifi/kpack-builder" --wait
+
+```
+
 ## Demo
 
 ## Features
