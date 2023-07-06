@@ -147,6 +147,14 @@ EOF
 namespace/korifi created
 ```
 
+### 6. Install Contour
+
+**Contour** is an open source Ingress controller for Kubernetes that is built on top of the Envoy proxy. An Ingress controller is a Kubernetes resource that manages the inbound network traffic to services within a cluster
+
+```shell
+kubectl apply -f https://projectcontour.io/quickstart/contour.yaml
+```
+
 ## Demo
 
 ## Features
