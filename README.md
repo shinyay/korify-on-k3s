@@ -57,6 +57,12 @@ mkidr vm
 multipass mount (pwd)/vm k3s:~/k8s
 ```
 
+Login to Multipass VM
+
+```shell
+multipass shell k3s
+```
+
 ### 1. Install K3s
 
 ```shell
