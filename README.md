@@ -31,6 +31,25 @@ Then spin up a new VM by specifying memory and disk space.
 multipass launch --name k3s --memory 4G --disk 40G
 ```
 
+Check the VM details.
+
+```shell
+multipass info k3s
+```
+
+```shell
+Name:           k3s
+State:          Running
+IPv4:           192.168.64.6
+Release:        Ubuntu 22.04.2 LTS
+Image hash:     fe102bfb3d3d (Ubuntu 22.04 LTS)
+CPU(s):         1
+Load:           0.51 0.33 0.13
+Disk usage:     1.4GiB out of 38.7GiB
+Memory usage:   189.5MiB out of 3.8GiB
+Mounts:         --
+```
+
 ### 1. Install K3s
 
 ```shell
