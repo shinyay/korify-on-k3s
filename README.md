@@ -25,6 +25,12 @@ K3s does not support MacOS. So you have to we need to setup a Linux layer on top
 brew install --cask multipass
 ```
 
+Then spin up a new VM by specifying memory and disk space.
+
+```shell
+multipass launch --name k3s --mem 4G --disk 40G
+```
+
 ### 1. Install K3s
 
 ```shell
