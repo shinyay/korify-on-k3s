@@ -127,6 +127,10 @@ EOF
 ```
 
 ```shell
+namespace/cf created
+```
+
+```shell
 cat << EOF | kubectl apply -f -
  
 apiVersion: v1
@@ -137,6 +141,10 @@ metadata:
      pod-security.kubernetes.io/audit: restricted
      pod-security.kubernetes.io/enforce: restricted
 EOF
+```
+
+```shell
+namespace/korifi created
 ```
 
 ## Demo
