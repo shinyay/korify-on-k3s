@@ -170,10 +170,11 @@ You can find the latest version of Korify
 - [korify](https://github.com/cloudfoundry/korifi/)
 
 ```shell
-helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v<VERSION>/korifi-<VERSION>.tgz \
+helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v0.7.1/korifi-0.7.1.tgz \
     --namespace="$KORIFI_NAMESPACE" \
     --set=global.generateIngressCertificates=true \
     --set=global.rootNamespace="$ROOT_NAMESPACE" \
+    --set=global.containerRegistrySecret="image-registry-credentials" \
     --set=adminUserName="$ADMIN_USERNAME" \
     --set=api.apiServer.url="api.$BASE_DOMAIN" \
     --set=global.defaultAppDomainName="apps.$BASE_DOMAIN" \
@@ -183,18 +184,17 @@ helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v<V
 ```
 
 ```shell
-helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v0.7.1/korifi-0.7.1.tgz   --
- 
-namespace="korifi"   --set=global.generateIngressCertificates=true   --set=global.rootNamespace="cf"   --
- 
-set=global.containerRegistrySecret="image-registry-credentials"   --set=adminUserName="system:admin"   --
- 
-set=api.apiServer.url="api.localhost"   --set=global.defaultAppDomainName="apps.localhost"   --
- 
-set=global.containerRepositoryPrefix="us-central1-docker.pkg.dev/summit-labs/korifi/korifi-"   --
- 
-set=kpackImageBuilder.builderRepository="us-central1-docker.pkg.dev/summit-labs/korifi/kpack-builder" --wait
-
+helm install korifi https://github.com/cloudfoundry/korifi/releases/download/v0.7.1/korifi-0.7.1.tgz \
+--namespace="korifi" \
+--set=global.generateIngressCertificates=true \
+--set=global.rootNamespace="cf" \
+--set=global.containerRegistrySecret="image-registry-credentials" \
+--set=adminUserName="system:admin" \
+--set=api.apiServer.url="api.localhost" \
+--set=global.defaultAppDomainName="apps.localhost" \
+--set=global.containerRepositoryPrefix="index.docker.io/shinyay/" \
+--set=kpackImageBuilder.builderRepository="index.docker.io/shinyay/kpack-builder" \
+--wait
 ```
 
 ## Demo
