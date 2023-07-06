@@ -57,7 +57,7 @@ mkidr vm
 multipass mount (pwd)/vm k3s:~/k8s
 ```
 
-Login to Multipass VM
+Open a shell prompt on the instance
 
 ```shell
 multipass shell k3s
@@ -65,10 +65,11 @@ multipass shell k3s
 
 ### 1. Install K3s
 
-```shell
-curl -sfL https://get.k3s.io | sh -s - --disable traefik --write-kubeconfig-mode 644
-```
+Run the following command inside of Multipass VM:
 
+```shell
+ubuntu@k3s:~$ curl -sfL https://get.k3s.io | sh -s - --disable traefik --write-kubeconfig-mode 644
+```
 
 ## Demo
 
