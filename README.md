@@ -101,6 +101,10 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 
 **Kpack** is an open source project that integrates with Kubernetes to provide a container-native build process. It consumes Cloud Native Buildpacks to export OCI-compatible containers.
 
+You can find the latest verison of kpack
+
+- [kpack](https://github.com/pivotal/kpack)
+
 ```shell
 kubectl apply -f https://github.com/pivotal/kpack/releases/download/v0.11.0/release-0.11.0.yaml
 ```
