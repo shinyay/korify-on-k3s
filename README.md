@@ -50,6 +50,13 @@ Memory usage:   189.5MiB out of 3.8GiB
 Mounts:         --
 ```
 
+Mount the VM
+
+```shell
+mkidr vm
+multipass mount (pwd)/vm k3s:~/k8s
+```
+
 ### 1. Install K3s
 
 ```shell
