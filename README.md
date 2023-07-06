@@ -106,7 +106,37 @@ You can find the latest verison of kpack
 - [kpack](https://github.com/pivotal/kpack)
 
 ```shell
-kubectl apply -f https://github.com/pivotal/kpack/releases/download/v0.11.0/release-0.11.0.yaml
+kubectl apply -f https://github.com/pivotal/kpack/releases/download/v0.11.1/release-0.11.1.yaml
+```
+
+### 5. Create Root Namespaces
+
+Now we create the cf and korifi namespaces.
+
+```shell
+cat << EOF | kubectl apply -f -
+ 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: $ROOT_NAMESPACE
+  labels:
+     pod-security.kubernetes.io/audit: restricted
+     pod-security.kubernetes.io/enforce: restricted
+EOF
+```
+
+```shell
+cat << EOF | kubectl apply -f -
+ 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: $KORIFI_NAMESPACE
+  labels:
+     pod-security.kubernetes.io/audit: restricted
+     pod-security.kubernetes.io/enforce: restricted
+EOF
 ```
 
 ## Demo
