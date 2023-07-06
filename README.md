@@ -205,7 +205,23 @@ Install cf command:
 wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | sudo apt-key add -
 echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
 sudo apt-get update
+sudo apt-get install cf8-cli
 ```
+
+```shell
+cf api https://api.localhost --skip-ssl-validation
+```
+
+```shell
+Setting API endpoint to https://api.localhost...
+OK
+
+API endpoint:   https://api.localhost
+API version:    3.117.0+cf-k8s
+
+Not logged in. Use 'cf login' or 'cf login --sso' to log in.
+```
+
 ## Demo
 
 ## Features
