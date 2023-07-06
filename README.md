@@ -9,6 +9,7 @@ Cloud Foundry Korifi is the familiar Cloud Foundry abstraction ported over to Ku
 In this tutorial I will try to install Korify on K3s.
 
 - [K3s](https://k3s.io/)
+  - Lightweight Kubernetes. Production ready, easy to install, half the memory, all in a binary less than 100 MB.
 
 ## Demo
 
