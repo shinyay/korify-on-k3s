@@ -1,6 +1,8 @@
 # Getting started with Korify on K3s
 
-Install Korifi to Manage K3s
+Cloud Foundry Korifi is the familiar Cloud Foundry abstraction ported over to Kubernetes clusters. It brings a multitenant experience to Kubernetes and helps app developers consume clusters with ease.
+
+- [Cloud Foundry Korifi](https://www.cloudfoundry.org/technology/korifi/)
 
 ## Description
 
