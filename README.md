@@ -76,6 +76,15 @@ ubuntu@k3s:~$ curl -sfL https://get.k3s.io | sh -s - --disable traefik --write-k
 - `–-write-kubeconfig-mode 644`
   - This sets the file permission mode of the generated kubeconfig file to 644 which means the owner will have read and write access, while others have only read access
 
+### 2. Set Environment Variables
+
+```shell
+export ROOT_NAMESPACE="cf"
+export KORIFI_NAMESPACE="korifi"
+export ADMIN_USERNAME="system:admin"
+export BASE_DOMAIN="localhost"
+```
+
 ## Demo
 
 ## Features
