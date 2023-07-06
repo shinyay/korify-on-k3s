@@ -11,6 +11,19 @@ In this tutorial I will try to install Korify on K3s.
 - [K3s](https://k3s.io/)
   - Lightweight Kubernetes. Production ready, easy to install, half the memory, all in a binary less than 100 MB.
 
+## Installation
+
+### 0. Multipass
+
+K3s does not support MacOS. So you have to we need to setup a Linux layer on top of MacOS.
+
+### 1. Install K3s
+
+```shell
+curl -sfL https://get.k3s.io | sh -s - --disable traefik --write-kubeconfig-mode 644
+```
+
+
 ## Demo
 
 ## Features
@@ -21,8 +34,6 @@ In this tutorial I will try to install Korify on K3s.
 ## Requirement
 
 ## Usage
-
-## Installation
 
 ## References
 
