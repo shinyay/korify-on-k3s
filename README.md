@@ -1,6 +1,6 @@
-# Name
+# Getting started with Korify on K3s
 
-Overview
+Install Korifi to Manage K3s
 
 ## Description
 
